@@ -1,0 +1,23 @@
+Any time you need to operate with many elements you require some kind of container. In native C (not C++) there was only one type of container: the array.
+
+The problem is not that arrays are limited (though, for example, it’s impossible to determine the size of array at runtime). Instead, the main problem is that many problems require a container with greater functionality.
+
+For example, we may need one or more of the following operations:
+
+1.) Add some string to a container.
+
+2.) Remove a string from a container.
+
+3.) Determine whether a string is present in the container.
+
+4.) Return a number of distinct elements in a container.
+
+5.) Iterate through a container and get a list of added strings in some order.
+
+
+Of course, one can implement this functionality in an ordinal array. 
+But the trivial implementation would be very inefficient. 
+You can create the tree- of hash- structure to solve it in a faster way, but think a bit: does the implementation of such a container depend on elements we are going to store? Do we have to re-implement the module to make it functional, 
+for example, for points on a plane but not strings?
+
+If not, we can develop the interface for such a container once, and then use everywhere for data of any type. 
